@@ -1,3 +1,5 @@
+/* #6B7ABF #F7882F #F7C331 #DCC7AA */
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #DCC7AA;
@@ -9,18 +11,26 @@ body {
     max-width: 100vw;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(80px, auto);
-    grid-gap: 10px;
+    grid-auto-rows: minmax(70px, auto);
+    grid-gap: 0px
 }
 
 .container > * {
-    background-color: #6b7a8f;
-    padding: 20px;
+    padding: 30px;
     color: #fff;
+}
+
+h3{
+    font-size: 1.5em;
 }
 
 header {
     grid-column: 1 / 13;
+    position: sticky;
+    width: 100%;
+    height: 20px;
+    padding-bottom: 30px;
+    display: flex;
 }
 
 .nav {
@@ -31,27 +41,96 @@ header {
     padding: 0px;
 }
 
-.nav li {
-    padding: 10px;
+.nav li a{
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 5px;
 }
+
 
 banner {
     grid-column: 1 / 13;
     grid-row: 2 / 5;
+    background: url(assets/banner.jpg) no-repeat;
+    background-size: cover;  
+    height: 40vh;  
+    position: relative;
 }
 
-.sobre-mi {
+.texto-banner {
+    position: relative;
+    top: 70px;
+}
+
+.sobremi {
     grid-column: 1 / 13;
     grid-row: 5 / 7;
 }
 
-.proyectos {
+.proyecto {
     grid-column: 1 / 13;
     grid-row: 7 / 10;
-    bac
 }
 
 footer {
     grid-column: 1 / 13;
     grid-row: 10 /11;
 }
+
+form{
+    margin: 30px auto;
+}
+
+input{
+    width: 90%;
+    border: none;
+    padding: 5px;
+}
+
+#enviar:hover{
+    cursor: pointer;
+}
+
+input:focus {
+    border: 2px solid #F7882F;
+}
+
+.mapa{
+    margin: 30px auto;
+    width: 100%;
+}
+ 
+#mail{
+    margin: 10px auto;
+}
+
+#nombre{
+    margin: 10px auto;
+}
+
+#mensaje{
+    margin: 10px auto;
+    width: 90%;
+    height: 70px;
+    border: none;
+    color: gray;
+    
+}
+
+.redes{
+    border: 2px solid #fff;
+    border-style: outset;
+    padding: 30px;
+}
+
+.redes a{
+    text-decoration: none;
+}
+
+.logo-redes{
+    width: 40px;
+    margin: 10px;
+}
+
