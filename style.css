@@ -2,12 +2,11 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #DCC7AA;
-    text-align: center;
+    background-color: #FFCC00;
 }
 
 .container {
-    margin: 0 auto;
+    margin: 0;
     max-width: 100vw;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -16,29 +15,48 @@ body {
 }
 
 .container > * {
-    padding: 30px;
+    padding-bottom: 30px;
     color: #fff;
 }
 
+h1 {
+    position: relative;
+    top: 67px;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+}
+
+h2 {
+    position: relative;
+    top: 55px;
+    font-size: 35px;
+    font-weight: 100;
+    text-align: center;
+}
+
 h3{
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 header {
     grid-column: 1 / 13;
-    position: sticky;
+    position: fixed;
     width: 100%;
     height: 20px;
-    padding-bottom: 30px;
+    padding-top: 22px;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1;
+    background: #FFCC00;
 }
 
 .nav {
     list-style-type: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
+    align-items: center; 
+    margin-right: 50px;   
 }
 
 .nav li a{
@@ -46,45 +64,131 @@ header {
     text-decoration: none;
     color: #fff;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.nav li a:hover {
+    font-size: 22px;
 }
 
 
 banner {
     grid-column: 1 / 13;
     grid-row: 2 / 5;
-    background: url(assets/banner.jpg) no-repeat;
-    background-size: cover;  
-    height: 40vh;  
+    padding-top: 52px;
+    background: url(assets/rsz_emile-perron-xrvdyzrgdw4-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 81vh;  
     position: relative;
+
 }
 
 .texto-banner {
     position: relative;
-    top: 70px;
+    top: 100px;
+    color: white;
+    background-color: #2222225e;
+    max-width: 800px;
+    min-height: 300px;
+
+    
 }
 
 .sobremi {
     grid-column: 1 / 13;
     grid-row: 5 / 7;
+    height: 70vh;
+    position: relative;
+}
+
+.contenidosobremi{
+    position: relative;
+    left: 20%;
+    top: 15%;
+    display: flex;
+    width: 70vw;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff4a;
+    color: #777;
+    padding: 20px;
+}
+
+.contenidosobremi p {
+    width: 50%;
+    text-align: justify;
+    font-size: 20px;
+}
+
+#vector {
+    width: 30%;
 }
 
 .proyecto {
     grid-column: 1 / 13;
     grid-row: 7 / 10;
+    max-height: 100vh;
 }
+
+.proyectos-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  
+    padding: 20px; 
+}
+
+.tarjeta {
+    background-color: #fff4f4;
+    width: 25%;
+    margin: 0 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 19px 0px #d0c6c663;
+    max-width: 300px;
+}
+
+.tarjeta:hover{
+    position: relative;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+.tarjeta img{
+    width: 100%;
+}
+
+.titulo-proyecto {
+    color: #777;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.descripcion-proyecto {
+    color: #777;
+    font-size: 16px;
+}
+
+
 
 footer {
     grid-column: 1 / 13;
     grid-row: 10 /11;
+    position: relative;
 }
 
 form{
-    margin: 30px auto;
+    position: relative;
+    left: 20%;
+    margin: 30px 20px;
+    padding: 20px;
+    background-color: #ffffff4a;
+    width: 60vw;
 }
 
 input{
-    width: 90%;
+    width: 50%;
     border: none;
     padding: 5px;
 }
@@ -93,13 +197,9 @@ input{
     cursor: pointer;
 }
 
-input:focus {
-    border: 2px solid #F7882F;
-}
-
 .mapa{
-    margin: 30px auto;
-    width: 100%;
+    margin: 30px 20px;
+    width: 70vw;
 }
  
 #mail{
@@ -112,7 +212,7 @@ input:focus {
 
 #mensaje{
     margin: 10px auto;
-    width: 90%;
+    width: 50%;
     height: 70px;
     border: none;
     color: gray;
@@ -120,13 +220,16 @@ input:focus {
 }
 
 .redes{
-    border: 2px solid #fff;
-    border-style: outset;
+    
     padding: 30px;
 }
 
 .redes a{
     text-decoration: none;
+}
+
+.redes img:hover{
+    width: 50px;
 }
 
 .logo-redes{
